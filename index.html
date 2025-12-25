@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DriveSmart Lessons</title>
+    <meta name="description" content="Professional driving lessons with a certified instructor. Learn safely and confidently with customized lesson plans." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="#home" class="logo"><img src="./img/rsz_logo_transparent.png" alt="Driving lessons logo" class="logo-img" /></a>
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-link" data-i18n="nav.home">Home</a>
+                <a href="#pricing" class="nav-link" data-i18n="nav.pricing">Pricing</a>
+                <a href="#testimonials" class="nav-link" data-i18n="nav.testimonials">Testimonials</a>
+                <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
+                <a href="#booking" class="nav-link cta" data-i18n="nav.book">Book Now</a>
+            </nav>
+            <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">EN</button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1 class="animate-fade-up" data-i18n="hero.title">Learn to Drive with Confidence</h1>
+                    <p class="subtitle animate-fade-up" style="--delay:100ms" data-i18n="hero.subtitle">Certified instructor. Modern methods. Tailored to your pace.</p>
+                    <div class="hero-cta animate-fade-up" style="--delay:200ms">
+                        <a href="#pricing" class="btn primary" data-i18n="hero.ctaPricing">View Pricing</a>
+                        <a href="#booking" class="btn ghost" data-i18n="hero.ctaBook">Book a Lesson</a>
+                    </div>
+                    <ul class="hero-bullets animate-fade-up" style="--delay:300ms">
+                        <li data-i18n="hero.bullet1">Flexible scheduling</li>
+                        <li data-i18n="hero.bullet2">Dual-control vehicle</li>
+                        <li data-i18n="hero.bullet3">Nervous beginners welcome</li>
+                    </ul>
+                </div>
+                <div class="hero-media">
+                    <div class="photo-frame animate-float">
+                        <img src="./img/Car.jpg" alt="Instructor and student in car" />
+                    </div>
+                </div>
+            </div>
+            <div class="hero-bg">
+                <img src="./img/pexels-mihail-emelyanov-127740824-33694372.jpg" alt="City road background" />
+            </div>
+        </section>
+
+        
+
+        <!-- Pricing -->
+        <section id="pricing" class="section pricing">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="animate-fade-up" data-i18n="pricing.title">Simple, Transparent Pricing</h2>
+                    <p class="animate-fade-up" style="--delay:100ms" data-i18n="pricing.subtitle">Choose the plan that fits your learning pace.</p>
+                </header>
+                <div class="pricing-grid">
+                    <article class="card animate-rise">
+                        <h3 data-i18n="pricing.starter.title">Starter</h3>
+                        <p class="price"><span>₪45</span> <span data-i18n="pricing.perLesson">/ lesson</span></p>
+                        <ul class="features">
+                            <li data-i18n="pricing.starter.f1">1 x 60-minute lesson</li>
+                            <li data-i18n="pricing.starter.f2">Pickup and drop-off</li>
+                            <li data-i18n="pricing.starter.f3">Basic maneuvers</li>
+                        </ul>
+                        <a href="#booking" class="btn outline" data-i18n="pricing.starter.cta">Get Started</a>
+                    </article>
+
+                    <article class="card featured animate-rise" style="--delay:100ms">
+                        <div class="badge" data-i18n="pricing.popular">Popular</div>
+                        <h3 data-i18n="pricing.pack.title">Confidence Pack</h3>
+                        <p class="price"><span>₪210</span> <span data-i18n="pricing.per5">/ 5 lessons</span></p>
+                        <ul class="features">
+                            <li data-i18n="pricing.pack.f1">5 x 60-minute lessons</li>
+                            <li data-i18n="pricing.pack.f2">City & highway practice</li>
+                            <li data-i18n="pricing.pack.f3">Parallel parking mastery</li>
+                        </ul>
+                        <a href="#booking" class="btn primary" data-i18n="pricing.pack.cta">Book Pack</a>
+                    </article>
+
+                    <article class="card animate-rise" style="--delay:200ms">
+                        <h3 data-i18n="pricing.test.title">Test Day</h3>
+                        <p class="price"><span>₪120</span> <span data-i18n="pricing.perSession">/ session</span></p>
+                        <ul class="features">
+                            <li data-i18n="pricing.test.f1">Pre-test warm-up</li>
+                            <li data-i18n="pricing.test.f2">Car for test included</li>
+                            <li data-i18n="pricing.test.f3">Route familiarization</li>
+                        </ul>
+                        <a href="#booking" class="btn outline" data-i18n="pricing.test.cta">Reserve</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="section testimonials">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="animate-fade-up" data-i18n="testimonials.title">What Students Say</h2>
+                    <p class="animate-fade-up" style="--delay:100ms" data-i18n="testimonials.subtitle">Real stories from real learners.</p>
+                </header>
+
+                <div class="carousel" aria-roledescription="carousel">
+                    <button class="carousel-btn prev" aria-label="Previous">&#10094;</button>
+                    <div class="slides" id="testimonial-slides" aria-live="polite">
+                        <div class="track">
+                            <figure class="slide">
+                                <div class="stars" aria-hidden="true">★★★★★</div>
+                                <blockquote data-i18n="testimonials.t1.txt">"I was so nervous before. Now I drive confidently to work!"</blockquote>
+                                <figcaption data-i18n="testimonials.t1.name">— Maya G.</figcaption>
+                            </figure>
+                            <figure class="slide">
+                                <div class="stars" aria-hidden="true">★★★★★</div>
+                                <blockquote data-i18n="testimonials.t2.txt">"Clear instructions and lots of patience. Passed on my first try."</blockquote>
+                                <figcaption data-i18n="testimonials.t2.name">— Daniel R.</figcaption>
+                            </figure>
+                            <figure class="slide">
+                                <div class="stars" aria-hidden="true">★★★★★</div>
+                                <blockquote data-i18n="testimonials.t3.txt">"Flexible scheduling made it easy to learn around my classes."</blockquote>
+                                <figcaption data-i18n="testimonials.t3.name">— Leila S.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" aria-label="Next">&#10095;</button>
+                    <div class="dots" id="testimonial-dots" role="tablist" aria-label="Testimonial pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section faq">
+            <div class="container">
+                <div class="faq-panel">
+                    <h2 class="faq-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+                    <ul class="faq-list" id="faq-accordion">
+                        <li class="faq-item">
+                            <button class="q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
+                                <span><span class="num">1.</span> <span data-i18n="faq.q1">Where do the lessons take place?</span></span>
+                                <span class="chev">▼</span>
+                            </button>
+                            <div class="a" id="faq-a1" role="region" aria-labelledby="faq-q1" aria-hidden="true">
+                                <div class="a-inner">
+                                    <p data-i18n="faq.a1">I teach in Ashdod and the surrounding area. We will set a convenient pickup point for you — from home, work or another agreed location.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="faq-item">
+                            <button class="q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
+                                <span><span class="num">2.</span> <span data-i18n="faq.q2">How long is a lesson and what is the price?</span></span>
+                                <span class="chev">▼</span>
+                            </button>
+                            <div class="a" id="faq-a2" role="region" aria-labelledby="faq-q2" aria-hidden="true">
+                                <div class="a-inner">
+                                    <p data-i18n="faq.a2">A standard lesson is 60 minutes. Prices appear in the pricing section. Packages are available for multiple lessons.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="faq-item">
+                            <button class="q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
+                                <span><span class="num">3.</span> <span data-i18n="faq.q3">Do you teach beginners and refreshers?</span></span>
+                                <span class="chev">▼</span>
+                            </button>
+                            <div class="a" id="faq-a3" role="region" aria-labelledby="faq-q3" aria-hidden="true">
+                                <div class="a-inner">
+                                    <p data-i18n="faq.a3">Yes. I teach complete beginners, refreshers, and drivers who want more confidence — at your pace and with lots of patience.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="faq-item">
+                            <button class="q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
+                                <span><span class="num">4.</span> <span data-i18n="faq.q4">Which car do you use?</span></span>
+                                <span class="chev">▼</span>
+                            </button>
+                            <div class="a" id="faq-a4" role="region" aria-labelledby="faq-q4" aria-hidden="true">
+                                <div class="a-inner">
+                                    <p data-i18n="faq.a4">I teach in a modern automatic vehicle equipped with dual controls and advanced safety systems to maximize comfort and safety.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                   
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking -->
+        <section id="booking" class="section booking">
+            <div class="container booking-grid">
+                <div class="booking-copy">
+                    <h2 class="animate-fade-up" data-i18n="booking.title">Ready to Start?</h2>
+                    <p class="animate-fade-up" style="--delay:100ms" data-i18n="booking.subtitle">Tell us a bit about you and we’ll confirm your first lesson.</p>
+                    <ul class="checklist animate-fade-up" style="--delay:200ms">
+                        <li data-i18n="booking.b1">Beginner friendly</li>
+                        <li data-i18n="booking.b2">Flexible times</li>
+                        <li data-i18n="booking.b3">Trusted, certified instructor</li>
+                    </ul>
+                </div>
+                <form class="booking-form animate-rise" id="booking-form" aria-label="Book a lesson">
+                    <label>
+                        <span data-i18n="form.name">Full name</span>
+                        <input type="text" name="name" placeholder="Your name" data-i18n-placeholder="form.namePh" required />
+                    </label>
+                    <label>
+                        <span data-i18n="form.email">Email</span>
+                        <input type="email" name="email" placeholder="you@example.com" data-i18n-placeholder="form.emailPh" required />
+                    </label>
+                    <label>
+                        <span data-i18n="form.phone">Phone</span>
+                        <input type="tel" name="phone" placeholder="(555) 000-0000" data-i18n-placeholder="form.phonePh" required />
+                    </label>
+                    <label>
+                        <span data-i18n="form.plan">Preferred plan</span>
+                        <select name="plan" id="plan-select" required>
+                            <option value="Starter" data-i18n="form.planStarter">Starter - ₪45 / lesson</option>
+                            <option value="Confidence Pack" data-i18n="form.planPack">Confidence Pack - ₪210 / 5 lessons</option>
+                            <option value="Test Day" data-i18n="form.planTest">Test Day - ₪120 / session</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span data-i18n="form.message">Message (optional)</span>
+                        <textarea name="message" rows="4" placeholder="Anything we should know?" data-i18n-placeholder="form.messagePh"></textarea>
+                    </label>
+                    <button type="submit" class="btn primary full" data-i18n="form.submit">Request Booking</button>
+                    <div class="social-links" aria-label="Social links">
+                        <a class="social instagram" href="https://www.instagram.com/arikkalifa?igsh=MXg2aDE5YWt3cmI2Mg%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                            </svg>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                        <a class="social whatsapp" href="https://wa.me/972000000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M20.5 11.5c0 4.97-4.03 9-9 9-1.58 0-3.07-.41-4.36-1.14L3.5 21.5l1.16-3.58A8.95 8.95 0 0 1 2.5 11.5c0-4.97 4.03-9 9-9s9 4.03 9 9Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M9.9 7.9c-.2-.46-.47-.47-.69-.47-.18 0-.38 0-.59.01-.2 0-.52.07-.8.38-.27.31-1.05 1.03-1.05 2.51 0 1.48 1.08 2.91 1.23 3.11.15.2 2.1 3.35 5.2 4.56 2.57 1.01 3.09.81 3.64.76.55-.05 1.8-.73 2.05-1.44.25-.71.25-1.32.17-1.44-.08-.12-.27-.2-.57-.35-.3-.15-1.8-.88-2.08-.98-.27-.1-.47-.15-.67.15-.2.31-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.5-.89-.79-1.48-1.76-1.65-2.06-.17-.31-.02-.47.13-.62.13-.13.3-.35.45-.52.15-.18.2-.31.3-.51.1-.2.05-.38-.02-.53-.07-.15-.62-1.52-.85-2.07Z" fill="currentColor"/>
+                            </svg>
+                            <span class="sr-only">WhatsApp</span>
+                        </a>
+                    </div>
+                    <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <p>© <span id="year"></span> <span data-i18n="footer.brand">DriveSmart Lessons</span>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+            <nav class="footer-nav">
+                <a href="#home" data-i18n="nav.home">Home</a>
+                <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+                <a href="#testimonials" data-i18n="nav.testimonials">Testimonials</a>
+                <a href="#booking" data-i18n="nav.bookShort">Book</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
+
+
