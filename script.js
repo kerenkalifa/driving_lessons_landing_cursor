@@ -7,6 +7,23 @@
   const formNote = document.getElementById('form-note');
   const faqAccordion = document.getElementById('faq-accordion');
 
+// Success popup helper
+function openSuccessModal() {
+  const modal = document.getElementById('success-modal');
+  if (!modal) return;
+
+  modal.classList.add('is-open');
+  modal.setAttribute('aria-hidden', 'false');
+
+  const close = () => {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+  };
+
+  modal.querySelector('.success-modal__close')?.addEventListener('click', close);
+  modal.querySelector('.success-modal__backdrop')?.addEventListener('click', close);
+}
+
   // Scheduler modal
   const schedulerModal = document.getElementById('schedulerModal');
   const schedulerCloseBtn = schedulerModal?.querySelector('.modal-close');
@@ -134,13 +151,18 @@
     }
 
     function updateTransform() {
-      if (!track) return;
+      if (!track || slides.length === 0) return;
       const gap = 12; // match CSS gap
       const perView = slidesPerView();
-      const containerWidth = slidesContainer.clientWidth;
-      const itemWidth = perView === 1 ? containerWidth : (containerWidth - gap * (perView - 1)) / perView;
+      // Use actual rendered width of first slide to account for CSS min-width rules
+      const firstSlide = slides[0];
+      const slideRect = firstSlide.getBoundingClientRect();
+      const itemWidth = slideRect.width;
       const x = index * (itemWidth + gap);
-      track.style.transform = `translateX(${-x}px)`;
+      // In RTL, we need to use positive X to move right (which shows next slides)
+      const isRTL = document.documentElement.dir === 'rtl' || 
+                    getComputedStyle(document.documentElement).direction === 'rtl';
+      track.style.transform = `translateX(${isRTL ? x : -x}px)`;
     }
 
     function show(i) {
@@ -192,9 +214,14 @@
       updateDots();
     });
 
-    // Init
+    // Init - wait for layout to complete
     buildDots();
-    show(0);
+    // Use requestAnimationFrame to ensure layout is complete before calculating transforms
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        show(0);
+      });
+    });
   }
 
   // Booking form feedback (no backend)
@@ -209,15 +236,37 @@
   //   });
   // }
 
-  // Booking form feedback + Formspree submit (Hebrew-only)
-  if (form && formNote) {
-    form.addEventListener('submit', () => {
+  // Booking form → WhatsApp redirect (Hebrew-only)
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
       const data = new FormData(form);
       const name = (data.get('name') || '').toString().trim();
+      const phone = (data.get('phone') || '').toString().trim();
+      const email = (data.get('email') || '').toString().trim();
+      const plan = (data.get('plan') || '').toString().trim();
+      const message = (data.get('message') || '').toString().trim();
 
-      formNote.textContent = name
-        ? `תודה ${name}! פנייתך התקבלה ונחזור אליך בהקדם.`
-        : 'תודה! פנייתך התקבלה ונחזור אליך בהקדם.';
+      const text =
+  `שלום אריק, אני מעוניין/ת בשיעורי נהיגה 👋
+  שם: ${name}
+  טלפון: ${phone}
+  אימייל: ${email}
+  חבילה מועדפת: ${plan}
+  הודעה: ${message || '—'}`;
+
+      const whatsappNumber = '972545677159'; // your number, no +
+      const whatsappUrl =
+        'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(text);
+
+      window.open(whatsappUrl, '_blank');
+
+      setTimeout(() => {
+        form.reset();
+        openSuccessModal();
+      }, 300);
+      
     });
   }
 
@@ -244,4 +293,10 @@
   }
 })();
 
+// Success modal
+const successModal = document.getElementById('success-modal');
+const successCloseBtn = successModal?.querySelector('.success-modal__close');
 
+successCloseBtn && successCloseBtn.addEventListener('click', () => {
+  successModal?.classList.remove('active');
+});
