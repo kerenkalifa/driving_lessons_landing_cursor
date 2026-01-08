@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,15 +13,18 @@
 <body>
     <header class="site-header">
         <div class="container nav-container">
-            <a href="#home" class="logo"><img src="./img/rsz_logo_transparent.png" alt="Driving lessons logo" class="logo-img" /></a>
+            <a href="#home" class="logo"><img src="./img/rsz_logo_transparent.png" alt="לוגו שיעורי נהיגה" class="logo-img" /></a>
             <nav class="nav" id="nav">
-                <a href="#home" class="nav-link" data-i18n="nav.home">Home</a>
-                <a href="#pricing" class="nav-link" data-i18n="nav.pricing">Pricing</a>
-                <a href="#testimonials" class="nav-link" data-i18n="nav.testimonials">Testimonials</a>
-                <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
-                <a href="#booking" class="nav-link cta" data-i18n="nav.book">Book Now</a>
+                <a href="#home" class="nav-link">בית</a>
+                <a href="#pricing" class="nav-link">מחירים</a>
+                <a href="#testimonials" class="nav-link">המלצות</a>
+                <a href="#faq" class="nav-link">שאלות נפוצות</a>
+                <a href="#booking" class="nav-link cta">קבע שיעור</a>
             </nav>
-            <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">EN</button>
+            <a href="tel:0545677159" class="nav-phone" aria-label="התקשר לאריק">
+                <span class="nav-phone-icon" aria-hidden="true">📞</span>
+                <span class="nav-phone-text">054-567-7159</span>
+            </a>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
                 <span></span>
                 <span></span>
@@ -34,18 +37,26 @@
         <!-- Hero -->
         <section id="home" class="hero">
             <div class="container hero-grid">
-                <div class="hero-content">
-                    <h1 class="animate-fade-up" data-i18n="hero.title">Learn to Drive with Confidence</h1>
-                    <p class="subtitle animate-fade-up" style="--delay:100ms" data-i18n="hero.subtitle">Certified instructor. Modern methods. Tailored to your pace.</p>
-                    <div class="hero-cta animate-fade-up" style="--delay:200ms">
-                        <a href="#pricing" class="btn primary" data-i18n="hero.ctaPricing">View Pricing</a>
-                        <a href="#booking" class="btn ghost" data-i18n="hero.ctaBook">Book a Lesson</a>
+                <div class="hero-content-inner">
+                    <div class="hero-teacher">
+                        <img src="./img/Arik profile image.png" alt="אריק – מורה נהיגה מוסמך" class="hero-teacher-img">
                     </div>
-                    <ul class="hero-bullets animate-fade-up" style="--delay:300ms">
-                        <li data-i18n="hero.bullet1">Flexible scheduling</li>
-                        <li data-i18n="hero.bullet2">Dual-control vehicle</li>
-                        <li data-i18n="hero.bullet3">Nervous beginners welcome</li>
-                    </ul>
+                    <div class="hero-copy">
+                        <div class="hero-text">
+                            <h1 class="animate-fade-up">ללמוד לנהוג בביטחון</h1>
+                            <p class="subtitle animate-fade-up" style="--delay:100ms"> ניסיון רב בליווי תלמידים בכל שלבי הלמידה,  שימת דגש על נהיגה בטוחה ובניית ביטחון אמיתי על הכביש.
+כל שיעור מותאם אישית לקצב ולצרכים של התלמיד, בשיטה מסודרת ומוכחת שמובילה לתוצאות.           </p>
+                        </div>
+                        <div class="hero-cta animate-fade-up" style="--delay:200ms">
+                            <a href="#pricing" class="btn primary">צפה במחירים</a>
+                            <a href="#booking" class="btn ghost">הזמן שיעור</a>
+                        </div>
+                        <ul class="hero-bullets stars animate-fade-up" style="--delay:300ms">
+                            <li>ליווי מקצועי לנהגים חדשים ולנהגים חוזרים – חיזוק הביטחון וצבירת ניסיון נהיגה</li>
+                            <li>המרת רישיון נהיגה זר לרישיון ישראלי בקלות ובהתאמה לדרישות משרד הרישוי</li>
+                            <li>העלאת הביטחון לנהיגה בטוחה בכביש ועזרה עם חרדות נהיגה</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="hero-media">
                     <div class="photo-frame animate-float">
@@ -64,42 +75,42 @@
         <section id="pricing" class="section pricing">
             <div class="container">
                 <header class="section-header">
-                    <h2 class="animate-fade-up" data-i18n="pricing.title">Simple, Transparent Pricing</h2>
-                    <p class="animate-fade-up" style="--delay:100ms" data-i18n="pricing.subtitle">Choose the plan that fits your learning pace.</p>
+                    <h2 class="animate-fade-up">מחירים פשוטים ושקופים</h2>
+                    <p class="animate-fade-up" style="--delay:100ms">בחרו את החבילה שמתאימה לקצב הלמידה שלכם.</p>
                 </header>
                 <div class="pricing-grid">
                     <article class="card animate-rise">
-                        <h3 data-i18n="pricing.starter.title">Starter</h3>
-                        <p class="price"><span>₪45</span> <span data-i18n="pricing.perLesson">/ lesson</span></p>
+                        <h3>שיעור נהיגה</h3>
+                        <p class="price"><span>₪170</span> <span></span></p>
                         <ul class="features">
-                            <li data-i18n="pricing.starter.f1">1 x 60-minute lesson</li>
-                            <li data-i18n="pricing.starter.f2">Pickup and drop-off</li>
-                            <li data-i18n="pricing.starter.f3">Basic maneuvers</li>
+                            <li>שיעור באורך של כ- 40 דקות</li>
+                            <li>איסוף והחזרה</li>
+                            <li>מיומנויות למידה עיוניים ומעשיים</li>
                         </ul>
-                        <a href="#booking" class="btn outline" data-i18n="pricing.starter.cta">Get Started</a>
+                        <a href="#booking" class="btn outline">התחל עכשיו</a>
                     </article>
 
                     <article class="card featured animate-rise" style="--delay:100ms">
-                        <div class="badge" data-i18n="pricing.popular">Popular</div>
-                        <h3 data-i18n="pricing.pack.title">Confidence Pack</h3>
-                        <p class="price"><span>₪210</span> <span data-i18n="pricing.per5">/ 5 lessons</span></p>
+                        <div class="badge">פופולרי</div>
+                        <h3>חבילת שיעורי נהיגה</h3>
+                        <p class="price"><span>₪4850</span></p>
                         <ul class="features">
-                            <li data-i18n="pricing.pack.f1">5 x 60-minute lessons</li>
-                            <li data-i18n="pricing.pack.f2">City & highway practice</li>
-                            <li data-i18n="pricing.pack.f3">Parallel parking mastery</li>
+                            <li>28 שיעורים</li>
+                            <li>טסט פנימי</li>
+                            <li>טסט חיצוני ראשון</li>
                         </ul>
-                        <a href="#booking" class="btn primary" data-i18n="pricing.pack.cta">Book Pack</a>
+                        <a href="#booking" class="btn primary">הזמן חבילה</a>
                     </article>
 
                     <article class="card animate-rise" style="--delay:200ms">
-                        <h3 data-i18n="pricing.test.title">Test Day</h3>
-                        <p class="price"><span>₪120</span> <span data-i18n="pricing.perSession">/ session</span></p>
+                        <h3>שיעור רענון נהיגה</h3>
+                        <p class="price"><span>₪150</span> <span> </span></p>
                         <ul class="features">
-                            <li data-i18n="pricing.test.f1">Pre-test warm-up</li>
-                            <li data-i18n="pricing.test.f2">Car for test included</li>
-                            <li data-i18n="pricing.test.f3">Route familiarization</li>
+                            <li>חיזוק ושיפור הביטחון בנהיגה</li>
+                            <li>שיפור מיומנויות מעשיות</li>
+                            <li>עדכון חוקי התנועה</li>
                         </ul>
-                        <a href="#booking" class="btn outline" data-i18n="pricing.test.cta">Reserve</a>
+                        <a href="#booking" class="btn outline">שמור מקום</a>
                     </article>
                 </div>
             </div>
@@ -109,33 +120,38 @@
         <section id="testimonials" class="section testimonials">
             <div class="container">
                 <header class="section-header">
-                    <h2 class="animate-fade-up" data-i18n="testimonials.title">What Students Say</h2>
-                    <p class="animate-fade-up" style="--delay:100ms" data-i18n="testimonials.subtitle">Real stories from real learners.</p>
+                    <h2 class="animate-fade-up">מה התלמידים אומרים</h2>
+                    <p class="animate-fade-up" style="--delay:100ms">סיפורים אמיתיים של לומדים אמיתיים.</p>
                 </header>
 
                 <div class="carousel" aria-roledescription="carousel">
-                    <button class="carousel-btn prev" aria-label="Previous">&#10094;</button>
+                    <button class="carousel-btn prev" aria-label="קודם">&#10094;</button>
                     <div class="slides" id="testimonial-slides" aria-live="polite">
                         <div class="track">
                             <figure class="slide">
                                 <div class="stars" aria-hidden="true">★★★★★</div>
-                                <blockquote data-i18n="testimonials.t1.txt">"I was so nervous before. Now I drive confidently to work!"</blockquote>
-                                <figcaption data-i18n="testimonials.t1.name">— Maya G.</figcaption>
+                                <blockquote>“מורה מצוין עם הרבה סבלנות ויחס אישי. אריק שם לב לפרטים הקטנים, עבד איתי בדיוק על הנקודות שהתקשיתי בהן והכין אותי מעולה לטסט. חוויה ממש טובה.”</blockquote>
+                                <figcaption>— איתי פ׳.</figcaption>
                             </figure>
                             <figure class="slide">
                                 <div class="stars" aria-hidden="true">★★★★★</div>
-                                <blockquote data-i18n="testimonials.t2.txt">"Clear instructions and lots of patience. Passed on my first try."</blockquote>
-                                <figcaption data-i18n="testimonials.t2.name">— Daniel R.</figcaption>
+                                <blockquote>“הייתי מאוד לחוצה מנהיגה, ואריק היה פשוט מדהים. תמיד רגוע, מעודד ומסביר בצורה ברורה. כל שיעור הרגשתי התקדמות. בזכותו אני נוהגת היום לבד ובביטחון.”</blockquote>
+                                <figcaption>— נועה מ׳.</figcaption>
                             </figure>
                             <figure class="slide">
                                 <div class="stars" aria-hidden="true">★★★★★</div>
-                                <blockquote data-i18n="testimonials.t3.txt">"Flexible scheduling made it easy to learn around my classes."</blockquote>
-                                <figcaption data-i18n="testimonials.t3.name">— Leila S.</figcaption>
+                                <blockquote>“אריק מורה מקצועי ברמות. תמיד מגיע בזמן, מסביר ברור ונותן תחושה שאפשר לטעות וללמוד בלי לחץ. מאוד אהבתי שהוא מתאים את השיעורים לקצב שלי. ממליץ בחום.”</blockquote>
+                                <figcaption>— יובל כ׳.</figcaption>
+                            </figure>
+                            <figure class="slide">
+                                <div class="stars" aria-hidden="true">★★★★★</div>
+                                <blockquote>“הגעתי לאריק אחרי חוויה לא טובה עם מורה קודם, והוא פשוט שינה לי את כל הגישה לנהיגה. סבלני, רגוע, מסביר כל דבר עד שמרגישים בטוחים. עברתי טסט ראשון ומרגישה הרבה יותר בטוחה על הכביש.”</blockquote>
+                                <figcaption>— דנה ל׳.</figcaption>
                             </figure>
                         </div>
                     </div>
-                    <button class="carousel-btn next" aria-label="Next">&#10095;</button>
-                    <div class="dots" id="testimonial-dots" role="tablist" aria-label="Testimonial pagination"></div>
+                    <button class="carousel-btn next" aria-label="הבא">&#10095;</button>
+                    <div class="dots" id="testimonial-dots" role="tablist" aria-label="ניווט המלצות"></div>
                 </div>
             </div>
         </section>
@@ -144,55 +160,62 @@
         <section id="faq" class="section faq">
             <div class="container">
                 <div class="faq-panel">
-                    <h2 class="faq-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+                    <h2 class="faq-title">שאלות נפוצות</h2>
                     <ul class="faq-list" id="faq-accordion">
                         <li class="faq-item">
                             <button class="q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
-                                <span><span class="num">1.</span> <span data-i18n="faq.q1">Where do the lessons take place?</span></span>
+                                <span><span class="num">1.</span> <span>היכן מתקיימים השיעורים?</span></span>
                                 <span class="chev">▼</span>
                             </button>
                             <div class="a" id="faq-a1" role="region" aria-labelledby="faq-q1" aria-hidden="true">
                                 <div class="a-inner">
-                                    <p data-i18n="faq.a1">I teach in Ashdod and the surrounding area. We will set a convenient pickup point for you — from home, work or another agreed location.</p>
+                                    <p>השיעורים מתקיימים באשדוד והסביבה. נקודת האיסוף נקבעת מראש בהתאם לנוחות התלמיד - מהבית, ממקום העבודה או מנקודה מוסכמת אחרת.</p>
                                 </div>
                             </div>
                         </li>
                         <li class="faq-item">
                             <button class="q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
-                                <span><span class="num">2.</span> <span data-i18n="faq.q2">How long is a lesson and what is the price?</span></span>
+                                <span><span class="num">2.</span> <span>מה משך השיעור ומה העלות?</span></span>
                                 <span class="chev">▼</span>
                             </button>
                             <div class="a" id="faq-a2" role="region" aria-labelledby="faq-q2" aria-hidden="true">
                                 <div class="a-inner">
-                                    <p data-i18n="faq.a2">A standard lesson is 60 minutes. Prices appear in the pricing section. Packages are available for multiple lessons.</p>
+                                    <p>משך שיעור סטנדרטי הוא 40 דקות. פירוט המחירים מופיע בסעיף המחירים באתר. ניתן להזמין גם חבילות שיעורים בהתאם לצורך.</p>
                                 </div>
                             </div>
                         </li>
                         <li class="faq-item">
                             <button class="q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
-                                <span><span class="num">3.</span> <span data-i18n="faq.q3">Do you teach beginners and refreshers?</span></span>
+                                <span><span class="num">3.</span> <span>מאיזה גיל מותר להתחיל ללמוד נהיגה?</span></span>
                                 <span class="chev">▼</span>
                             </button>
                             <div class="a" id="faq-a3" role="region" aria-labelledby="faq-q3" aria-hidden="true">
                                 <div class="a-inner">
-                                    <p data-i18n="faq.a3">Yes. I teach complete beginners, refreshers, and drivers who want more confidence — at your pace and with lots of patience.</p>
+                                    <ul class="faq-bullets">
+                                        <li>מגיל 16 – ניתן להתחיל לימוד תיאוריה</li>
+                                        <li>מגיל 16 ו־6 חודשים – ניתן להתחיל שיעורי נהיגה מעשיים</li>
+                                        <li>מגיל 16 ו־9 חודשים – ניתן לגשת לטסט</li>
+                                    </ul>
                                 </div>
                             </div>
                         </li>
                         <li class="faq-item">
                             <button class="q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
-                                <span><span class="num">4.</span> <span data-i18n="faq.q4">Which car do you use?</span></span>
+                                <span><span class="num">4.</span> <span>על איזה רכב מתקיימים השיעורים?</span></span>
                                 <span class="chev">▼</span>
                             </button>
                             <div class="a" id="faq-a4" role="region" aria-labelledby="faq-q4" aria-hidden="true">
                                 <div class="a-inner">
-                                    <p data-i18n="faq.a4">I teach in a modern automatic vehicle equipped with dual controls and advanced safety systems to maximize comfort and safety.</p>
+                                    <p>השיעורים מתקיימים על רכב אוטומטי מודרני, המצויד בדוושות כפולות ובמערכות בטיחות מתקדמות - לנוחות מרבית ולרמת בטיחות גבוהה.</p>
                                 </div>
                             </div>
                         </li>
                     </ul>
                    
                 </div>
+                <p class="cta-nudge">
+  מרגישים מוכנים להתחיל? <strong>השאירו פרטים</strong> ונחזור אליכם בהקדם.
+                </p>
             </div>
         </section>
 
@@ -200,40 +223,55 @@
         <section id="booking" class="section booking">
             <div class="container booking-grid">
                 <div class="booking-copy">
-                    <h2 class="animate-fade-up" data-i18n="booking.title">Ready to Start?</h2>
-                    <p class="animate-fade-up" style="--delay:100ms" data-i18n="booking.subtitle">Tell us a bit about you and we’ll confirm your first lesson.</p>
+                    <h2 class="animate-fade-up">מוכנים להתחיל?</h2>
+                    <p class="animate-fade-up" style="--delay:100ms">ספרו לנו קצת עליכם ונאשר את השיעור הראשון.</p>
                     <ul class="checklist animate-fade-up" style="--delay:200ms">
-                        <li data-i18n="booking.b1">Beginner friendly</li>
-                        <li data-i18n="booking.b2">Flexible times</li>
-                        <li data-i18n="booking.b3">Trusted, certified instructor</li>
+                        <li>מתאים למתחילים</li>
+                        <li>זמנים גמישים</li>
+                        <li>מורה מוסמך ואמין</li>
                     </ul>
                 </div>
-                <form class="booking-form animate-rise" id="booking-form" aria-label="Book a lesson">
+                <form class="booking-form animate-rise" id="booking-form"
+                        action="https://formspree.io/f/mbdldabd"
+                        method="POST" 
+                        aria-label="הזמנת שיעור">
+                        <input type="hidden" name="_subject" value="New booking request">
                     <label>
-                        <span data-i18n="form.name">Full name</span>
-                        <input type="text" name="name" placeholder="Your name" data-i18n-placeholder="form.namePh" required />
+                        <span>שם מלא</span>
+                        <input type="text" name="name" placeholder="השם שלך" required />
                     </label>
                     <label>
-                        <span data-i18n="form.email">Email</span>
-                        <input type="email" name="email" placeholder="you@example.com" data-i18n-placeholder="form.emailPh" required />
+                        <span>טלפון</span>
+                        <input type="tel" name="phone" placeholder="(05X)-XXXXXXX" required />
                     </label>
                     <label>
-                        <span data-i18n="form.phone">Phone</span>
-                        <input type="tel" name="phone" placeholder="(555) 000-0000" data-i18n-placeholder="form.phonePh" required />
-                    </label>
-                    <label>
-                        <span data-i18n="form.plan">Preferred plan</span>
-                        <select name="plan" id="plan-select" required>
-                            <option value="Starter" data-i18n="form.planStarter">Starter - ₪45 / lesson</option>
-                            <option value="Confidence Pack" data-i18n="form.planPack">Confidence Pack - ₪210 / 5 lessons</option>
-                            <option value="Test Day" data-i18n="form.planTest">Test Day - ₪120 / session</option>
+                        <span>חבילה מועדפת</span>
+                        <select name="plan" id="plan-select">
+                            <option value="Starter">מתחילים - ₪160 / שיעור</option>
+                            <option value="Confidence Pack">חבילת ביטחון - ₪785 / 5 שיעורים</option>
+                            <option value="Test Day">יום מבחן - ₪120 / מפגש</option>
                         </select>
                     </label>
                     <label>
-                        <span data-i18n="form.message">Message (optional)</span>
-                        <textarea name="message" rows="4" placeholder="Anything we should know?" data-i18n-placeholder="form.messagePh"></textarea>
+                        <span>הודעה (לא חובה)</span>
+                        <textarea name="message" rows="4" placeholder="יש משהו שכדאי לדעת?"></textarea>
                     </label>
-                    <button type="submit" class="btn primary full" data-i18n="form.submit">Request Booking</button>
+                    <button type="submit" class="btn primary full">שלח בקשה</button>
+                    <p class="form-microcopy">
+    הפנייה תיפתח בוואטסאפ — ללא התחייבות
+                    </p>
+                    <div class="existing-students">
+                        <p>
+                            תלמידים קיימים?
+                            <a
+                            href="https://wa.me/972545677159"
+                            target="_blank"
+                            rel="noopener"
+                            >
+                            קביעת שיעור הבא בוואטסאפ
+                            </a>
+                        </p>
+                    </div>
                     <div class="social-links" aria-label="Social links">
                         <a class="social instagram" href="https://www.instagram.com/arikkalifa?igsh=MXg2aDE5YWt3cmI2Mg%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -243,33 +281,167 @@
                             </svg>
                             <span class="sr-only">Instagram</span>
                         </a>
-                        <a class="social whatsapp" href="https://wa.me/972000000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <a class="social whatsapp" href="https://wa.me/972545677159" target="_blank" rel="noopener" aria-label="WhatsApp">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path d="M20.5 11.5c0 4.97-4.03 9-9 9-1.58 0-3.07-.41-4.36-1.14L3.5 21.5l1.16-3.58A8.95 8.95 0 0 1 2.5 11.5c0-4.97 4.03-9 9-9s9 4.03 9 9Z" stroke="currentColor" stroke-width="1.5"/>
                                 <path d="M9.9 7.9c-.2-.46-.47-.47-.69-.47-.18 0-.38 0-.59.01-.2 0-.52.07-.8.38-.27.31-1.05 1.03-1.05 2.51 0 1.48 1.08 2.91 1.23 3.11.15.2 2.1 3.35 5.2 4.56 2.57 1.01 3.09.81 3.64.76.55-.05 1.8-.73 2.05-1.44.25-.71.25-1.32.17-1.44-.08-.12-.27-.2-.57-.35-.3-.15-1.8-.88-2.08-.98-.27-.1-.47-.15-.67.15-.2.31-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.5-.89-.79-1.48-1.76-1.65-2.06-.17-.31-.02-.47.13-.62.13-.13.3-.35.45-.52.15-.18.2-.31.3-.51.1-.2.05-.38-.02-.53-.07-.15-.62-1.52-.85-2.07Z" fill="currentColor"/>
                             </svg>
                             <span class="sr-only">WhatsApp</span>
                         </a>
+                        <a class="social tiktok" href="https://www.tiktok.com/@YOUR_USERNAME" target="_blank" rel="noopener" aria-label="TikTok">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <!-- Square outline -->
+                        <rect x="3" y="3" width="18" height="18" rx="5"
+                            stroke="currentColor" stroke-width="1.5"/>
+                        <!-- TikTok note -->
+                        <path d="M13.5 7.2c.7.9 1.8 1.6 3 1.7v2.1c-1.2-.1-2.3-.5-3-1.1v4.6a3.9 3.9 0 1 1-3.9-3.9c.3 0 .6 0 .9.1v2.1a1.8 1.8 0 1 0 1.8 1.8V6h1.2Z"
+                            fill="currentColor"/>
+                        </svg>
+                        <span class="sr-only">TikTok</span>
+                        </a>
+                        <a class="social facebook" href="https://www.facebook.com/arikkalifa" target="_blank" rel="noopener" aria-label="Facebook">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <!-- Square outline -->
+                            <rect x="3" y="3" width="18" height="18" rx="5"
+                                stroke="currentColor" stroke-width="1.5"/>
+                            <!-- Facebook "f" -->
+                            <path d="M13.5 8.5h2V6h-2c-2 0-3.5 1.6-3.5 3.5V12H8v2.5h2V18h2.5v-3.5H15l.5-2.5h-3V9.5c0-.55.45-1 1-1Z"
+                                fill="currentColor"/>
+                            </svg>
+                            <span class="sr-only">Facebook</span>
+                        </a>          
                     </div>
                     <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
                 </form>
             </div>
         </section>
+        <!-- <section class="existing-students">
+            <h2 data-i18n="existing.title">Existing Students</h2>
+            <p data-i18n="existing.subtitle">
+                Schedule your next driving lesson based on available times.
+            </p>
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                id="open-calendly"
+                data-i18n="existing.cta">
+                Schedule your next lesson
+            </button>
+        </section> -->
+
+        <!-- <section id="schedule-lesson" class="schedule-section">
+            <div class="container"> -->
+                <!-- English -->
+                <!-- <div class="lang-en">
+                    <h2>Schedule Your Next Lesson</h2>
+                    <p>Existing students can book their next lesson based on available times.</p>
+                    <button id="openScheduler" class="btn-primary">
+                    Schedule Next Lesson
+                    </button>
+                </div> -->
+
+                <!-- Hebrew -->
+                <!-- <div class="lang-he" dir="rtl" lang="he">
+                    <h2>קביעת שיעור נוסף</h2>
+                    <p>תלמידים קיימים יכולים לקבוע שיעור נוסף בהתאם לשעות הפנויות ביומן.</p>
+                    <button id="openSchedulerHe" class="btn-primary">
+                    קביעת שיעור
+                    </button>
+                </div>
+            </div>
+        </section> -->
     </main>
 
     <footer class="site-footer">
         <div class="container footer-grid">
-            <p>© <span id="year"></span> <span data-i18n="footer.brand">DriveSmart Lessons</span>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+            <p>© <span id="year"></span> DriveSmart Lessons. כל הזכויות שמורות.</p>
             <nav class="footer-nav">
-                <a href="#home" data-i18n="nav.home">Home</a>
-                <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
-                <a href="#testimonials" data-i18n="nav.testimonials">Testimonials</a>
-                <a href="#booking" data-i18n="nav.bookShort">Book</a>
+                <a href="#home">בית</a>
+                <a href="#pricing">מחירים</a>
+                <a href="#testimonials">המלצות</a>
+                <a href="#booking">קבע</a>
             </nav>
         </div>
     </footer>
 
+    <!-- Scheduler Modal -->
+    <!-- <div id="schedulerModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <h2 id="modal-title">Schedule Your Next Lesson</h2>
+        <p><iframe src="https://app.tor.digital/auth/login/" 
+        width="100%" height="650" frameborder="0" allowfullscreen>
+        </iframe></p>
+        
+      </div>
+    </div> -->
+
     <script src="./script.js"></script>
+    <!-- Calendly widget styles -->
+    <!-- <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"> -->
+
+    <!-- Calendly widget script -->
+    <!-- <script src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
+    <!-- <script>
+  window.addEventListener('load', function () {
+    if (window.Calendly) {
+      Calendly.initBadgeWidget({
+        url: 'https://calendly.com/arik-driving?hide_landing_page_details=1&hide_gdpr_banner=1',
+        text: 'Schedule time with me',
+        color: '#0069ff',
+        textColor: '#ffffff',
+        branding: false
+      });
+    }
+  });
+</script> -->
+
+<!-- <script>
+  function initCalendlyBadge(lang, retries = 10) {
+    // Remove existing badge
+    const existing = document.querySelector('.calendly-badge-widget');
+    if (existing) existing.remove();
+
+    // If Calendly isn't ready yet, retry shortly
+    if (!window.Calendly) {
+      if (retries > 0) {
+        setTimeout(() => initCalendlyBadge(lang, retries - 1), 300);
+      }
+      return;
+    }
+
+    Calendly.initBadgeWidget({
+      url:
+        'https://calendly.com/arik-driving' +
+        '?hide_landing_page_details=1&hide_gdpr_banner=1' +
+        (lang === 'he' ? '&locale=he' : ''),
+      text: lang === 'he'
+        ? 'קביעת השיעור הבא'
+        : 'Schedule your next lesson',
+      color: '#0069ff',
+      textColor: '#ffffff',
+      branding: false
+    });
+  }
+
+  window.addEventListener('load', function () {
+    const lang = localStorage.getItem('lang') || 'en';
+    initCalendlyBadge(lang);
+  });
+</script> -->
+<!-- <script src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
+
+    <div id="success-modal" class="success-modal" aria-hidden="true">
+    <div class="success-modal__backdrop"></div>
+    <div class="success-modal__content" role="dialog" aria-modal="true">
+        <button class="success-modal__close" aria-label="סגור">×</button>
+        <h3>ההודעה נשלחה 🎉</h3>
+        <p>נחזור אליך בהקדם האפשרי.</p>
+    </div>
+    </div>
 </body>
 </html>
 
